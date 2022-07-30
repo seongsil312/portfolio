@@ -21,7 +21,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className={tw`mx-80`}>
       <Header />
       <section className={tw`py-32`}>
         <h1 className={BodyFontStyle}>2022 Ver.</h1>
@@ -36,7 +36,10 @@ function Home() {
             src={arrowUrl}
             alt="arrow"
             className={tw`absolute left-1/2 top-1/2 -translate-1/2 cursor-pointer`}
-            onClick={() => navigate('/main')}
+            onClick={() => {
+              sessionStorage.setItem('index', '0');
+              navigate('/main');
+            }}
           />
         </div>
       </footer>

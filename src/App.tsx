@@ -1,6 +1,7 @@
 import Container from 'components/container';
 import About from 'pages/about';
 import Home from 'pages/home';
+import Loading from 'pages/loading';
 import Main from 'pages/main';
 import Menu from 'pages/menu';
 import { Suspense, lazy } from 'react';
@@ -23,7 +24,7 @@ function App() {
       <Route
         path="/dental"
         element={
-          <Suspense fallback={<>loading...</>}>
+          <Suspense fallback={<Loading />}>
             <Dental />
           </Suspense>
         }
@@ -31,7 +32,7 @@ function App() {
       <Route
         path="/copy-cat"
         element={
-          <Suspense fallback={<>loading...</>}>
+          <Suspense fallback={<Loading />}>
             <CopyCat />
           </Suspense>
         }
@@ -39,7 +40,7 @@ function App() {
       <Route
         path="/joongang"
         element={
-          <Suspense fallback={<>loading...</>}>
+          <Suspense fallback={<Loading />}>
             <Joongang />
           </Suspense>
         }
@@ -47,7 +48,7 @@ function App() {
       <Route
         path="/chungjungwon"
         element={
-          <Suspense fallback={<>loading...</>}>
+          <Suspense fallback={<Loading />}>
             <Chungjungwon />
           </Suspense>
         }

@@ -4,7 +4,7 @@ import { tw } from 'twind';
 function Container() {
   return (
     <div className={tw`w-full h-screen`}>
-      <div className={tw`mx-80 h-full relative`}>
+      <div className={tw`h-full relative`}>
         <Outlet />
       </div>
     </div>

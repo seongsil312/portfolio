@@ -29,16 +29,19 @@ function Menu() {
   };
 
   return (
-    <>
+    <div className={tw`mx-80 menu-container`}>
       <header className={tw`py-6 absolute right-0`}>
         <MdOutlineClose
           className={tw`w-6 h-6 cursor-pointer`}
-          onClick={() => navigate('/')}
+          onClick={() => navigate(-1)}
         />
       </header>
-      <section className={tw`h-full flex justify-between items-center px-40`}>
+      <section className={tw`h-full flex justify-between items-center`}>
         <i
-          onClick={() => navigate('/main')}
+          onClick={() => {
+            sessionStorage.setItem('index', '0');
+            navigate('/main');
+          }}
           onMouseEnter={() => {
             setIsActiveProjectIcon(true);
           }}
@@ -60,8 +63,8 @@ function Menu() {
           {renderAboutIcon()}
         </i>
       </section>
-      <hr className={tw`fixed w-full left-0 top-1/2`} />
-    </>
+      <hr className={tw`fixed w-full left-0 top-1/2 menu-hr`} />
+    </div>
   );
 }
 

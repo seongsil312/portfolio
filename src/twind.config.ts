@@ -8,13 +8,9 @@ setup({
     '@import': `url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap')`,
   },
   theme: {
-    fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-      serif: ['Georgia', 'serif'],
-    },
     extend: {
       fontFamily: {
-        sans: 'Montserrat',
+        Montserrat: '"Montserrat"',
       },
       colors: {
         ...colors,
